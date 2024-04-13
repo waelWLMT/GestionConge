@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{41FCCFB7-07E1-47AA-AA4E-9F7F1C6AF6C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{5059FDB8-AEB1-4342-8A43-BA5D78D36987}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "Services\BLL.csproj", "{5059FDB8-AEB1-4342-8A43-BA5D78D36987}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyApp_WinForms", "MyApp_WinForms\MyApp_WinForms.csproj", "{790D6C54-140A-4D34-9F14-4331B747CC1E}"
 EndProject
