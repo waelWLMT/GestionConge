@@ -1,5 +1,5 @@
-﻿using Services.Iservices;
-using Services.Services;
+﻿using BLL.Iservices;
+using BLL.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +13,8 @@ using System.Windows.Forms;
 namespace MyApp_WinForms.MyForms
 {
     public partial class Login : Form
-    {
 
+    {
         private readonly IUserService _userService;
 
         public Login()
@@ -23,19 +23,33 @@ namespace MyApp_WinForms.MyForms
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void authenticate_btn_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             var login = login_txt.Text;
             var password = pwd_txt.Text;
 
             var user = _userService.Authenticate(login, password);
-
-            if(user == null)
+            if (user == null)
             {
                 string message = "login ou mot de passe incorrect";
                 string title = "login failed";
@@ -43,7 +57,7 @@ namespace MyApp_WinForms.MyForms
 
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
 
-                DialogResult result = 
+                DialogResult result =
                     MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
 
@@ -54,12 +68,11 @@ namespace MyApp_WinForms.MyForms
 
             }
 
-            if(user != null)
+            if (user != null)
             {
                 var message = "Login est mot de passe correct";
                 MessageBox.Show(message);
             }
-
         }
     }
 }

@@ -11,7 +11,21 @@ namespace Models.Entities
         public int UserId { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
-        public bool Activated { get; set; }
+        public Boolean Activated { get; set; }
 
+        public User()
+        {
+
+        }
+
+        public User( string login, string password)
+        {
+            Login = login;
+            Password = password;
+        }
     }
+
+
+    
+
 }
