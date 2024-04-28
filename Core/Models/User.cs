@@ -9,9 +9,14 @@ namespace Core.Models
     public class User
     {
         public int UserId { get; set; }
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
         public Boolean Activated { get; set; }
+
+        // proprietes de navigation
+        public List<Voiture> Voitures { get; set; }
 
         public User()
         {

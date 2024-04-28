@@ -12,41 +12,19 @@ using System.Windows.Forms;
 
 namespace WinForms.MyForms
 {
-    public partial class Login : Form
-
+    public partial class AuthentificationFrm : Form
     {
         private readonly IUserService _userService;
-
-        public Login()
+        public AuthentificationFrm()
         {
-            this._userService = new UserService();
             InitializeComponent();
+            this._userService = new UserService();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button_seconnecter_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void login_txt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var login = login_txt.Text;
-            var password = pwd_txt.Text;
+            var login = text_login.Text;
+            var password = text_pwd.Text;
 
             var user = _userService.Authenticate(login, password);
             if (user == null)
@@ -63,16 +41,24 @@ namespace WinForms.MyForms
 
                 if (result == DialogResult.OK)
                 {
-                    this.Close();
+                    this.ResetText();
                 }
 
             }
 
             if (user != null)
             {
-                var message = "Login est mot de passe correct";
-                MessageBox.Show(message);
+                Hide();
+                AcceuilForm acceuil = new AcceuilForm();
+                acceuil.Closed += (s, args) => this.Close();
+                acceuil.Show();
+
             }
+        }
+
+        private void button_annuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

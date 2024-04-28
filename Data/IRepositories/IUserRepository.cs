@@ -17,6 +17,6 @@ namespace Data.IRepositories
         void DeleteUser(int userId);
 
         List<User> GetUsers();
-
+        User GetUserByName(string name);
     }
 }

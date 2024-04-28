@@ -15,5 +15,6 @@ namespace BLL.IServices
         User AfficherUserById(int userId);
         void SuppressionUser(int userId);
         List<User> GetListUsers();
+        User AfficherbyName(string name);
     }
 }

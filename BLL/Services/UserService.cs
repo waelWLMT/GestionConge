@@ -21,6 +21,12 @@ namespace BLL.Services
             this._userRepository = new UserRepository();
         }
 
+        public User AfficherbyName(string name)
+        {
+            var user = this._userRepository.GetUserByName(name);
+            return user;
+        }
+
         public User AfficherUserById(int userId)
         {
             var user = this._userRepository.GetUserById(userId);
