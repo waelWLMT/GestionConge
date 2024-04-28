@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33FE220F-BCEE-40DF-BFF9-91529C5F41B2}</ProjectGuid>
+    <ProjectGuid>{6AF39359-97E1-49E8-8971-E90A319D9C5E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Data</RootNamespace>
@@ -41,16 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Irepositories\IUserRepository.cs" />
+    <Compile Include="IRepositories\IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{8ac87fbb-22e9-4dbd-a76c-32f32994f5bb}</Project>
-      <Name>Models</Name>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{eb1e40fa-be22-4747-91ba-196d149d7bdd}</Project>
+      <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

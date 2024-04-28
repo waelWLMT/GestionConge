@@ -1,7 +1,8 @@
-﻿using BLL.Iservices;
-using Data.Irepositories;
+﻿using BLL.IServices;
+using Core.Models;
+using Data.IRepositories;
 using Data.Repositories;
-using Models.Entities;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,5 +1,6 @@
-﻿using Data.Irepositories;
-using Models.Entities;
+﻿
+using Core.Models;
+using Data.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;

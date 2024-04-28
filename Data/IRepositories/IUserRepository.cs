@@ -1,13 +1,14 @@
-﻿using Models.Entities;
+﻿
+using Core.Models;
 using System.Collections.Generic;
 
-namespace Data.Irepositories
+namespace Data.IRepositories
 {
     public interface IUserRepository
     {
         User GetUserByLoginAndPassword(string login, string password);
 
-       void AddUser(User user);
+        void AddUser(User user);
 
         void UpdateUser(User user);
 
