@@ -48,5 +48,21 @@ namespace WinForms.MyForms
             authentification.Closed += (s, args) => this.Close();
             authentification.Show();
         }
+
+        private void btn_deconnection_Click(object sender, EventArgs e)
+        {
+            Hide();
+            AuthentificationFrm authentification = new AuthentificationFrm();
+            authentification.Closed += (s, args) => this.Close();
+            authentification.Show();
+        }
+
+        private void pict_voitures_Click(object sender, EventArgs e)
+        {
+            Hide();
+            GestionVoituresForm voiture = new GestionVoituresForm();
+            voiture.Closed += (s, args) => this.Close();
+            voiture.Show();
+        }
     }
 }

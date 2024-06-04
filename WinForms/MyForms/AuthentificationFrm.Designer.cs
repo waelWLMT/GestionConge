@@ -144,7 +144,7 @@ namespace WinForms.MyForms
             this.text_pwd.Location = new System.Drawing.Point(199, 203);
             this.text_pwd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.text_pwd.Name = "text_pwd";
-            this.text_pwd.PasswordChar = '\0';
+            this.text_pwd.PasswordChar = '*';
             this.text_pwd.PlaceholderText = "Mot de passe";
             this.text_pwd.SelectedText = "";
             this.text_pwd.Size = new System.Drawing.Size(159, 43);

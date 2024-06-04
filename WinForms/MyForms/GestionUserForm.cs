@@ -157,5 +157,13 @@ namespace WinForms.MyForms
 
 
         }
+
+        private void lab_menu_Click(object sender, EventArgs e)
+        {
+            Hide();
+            AcceuilForm acceuil = new AcceuilForm();
+            acceuil.Closed += (s, args) => this.Close();
+            acceuil.Show();
+        }
     }
 }

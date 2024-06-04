@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Entretien.cs" />
+    <Compile Include="Models\Marque.cs" />
+    <Compile Include="Models\Model.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Voiture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

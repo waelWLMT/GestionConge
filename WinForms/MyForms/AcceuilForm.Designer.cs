@@ -41,20 +41,22 @@ namespace WinForms.MyForms
             this.labUsers = new System.Windows.Forms.Label();
             this.lab_voitures = new System.Windows.Forms.Label();
             this.lab_entretiens = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btn_deconnection = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lab_deconnecter = new System.Windows.Forms.Label();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pict_users)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict_voitures)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict_entretiens)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_deconnection)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Teal;
+            this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -122,6 +124,7 @@ namespace WinForms.MyForms
             this.pict_voitures.TabIndex = 3;
             this.pict_voitures.TabStop = false;
             this.pict_voitures.UseTransparentBackground = true;
+            this.pict_voitures.Click += new System.EventHandler(this.pict_voitures_Click);
             // 
             // pict_entretiens
             // 
@@ -171,19 +174,20 @@ namespace WinForms.MyForms
             this.lab_entretiens.TabIndex = 6;
             this.lab_entretiens.Text = "Gestion Entretiens";
             // 
-            // guna2PictureBox1
+            // btn_deconnection
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BorderRadius = 15;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(703, 377);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(41, 43);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 7;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
+            this.btn_deconnection.BackColor = System.Drawing.Color.Transparent;
+            this.btn_deconnection.BorderRadius = 15;
+            this.btn_deconnection.Image = ((System.Drawing.Image)(resources.GetObject("btn_deconnection.Image")));
+            this.btn_deconnection.ImageRotate = 0F;
+            this.btn_deconnection.Location = new System.Drawing.Point(709, 374);
+            this.btn_deconnection.Name = "btn_deconnection";
+            this.btn_deconnection.Size = new System.Drawing.Size(41, 43);
+            this.btn_deconnection.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_deconnection.TabIndex = 7;
+            this.btn_deconnection.TabStop = false;
+            this.btn_deconnection.UseTransparentBackground = true;
+            this.btn_deconnection.Click += new System.EventHandler(this.btn_deconnection_Click);
             // 
             // lab_deconnecter
             // 
@@ -202,12 +206,24 @@ namespace WinForms.MyForms
             this.guna2Elipse2.BorderRadius = 15;
             this.guna2Elipse2.TargetControl = this;
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.guna2ControlBox1.ControlBoxStyle = Guna.UI2.WinForms.Enums.ControlBoxStyle.Custom;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(858, 9);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 9;
+            // 
             // AcceuilForm
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(915, 461);
             this.Controls.Add(this.lab_deconnecter);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.btn_deconnection);
             this.Controls.Add(this.lab_entretiens);
             this.Controls.Add(this.lab_voitures);
             this.Controls.Add(this.labUsers);
@@ -226,7 +242,7 @@ namespace WinForms.MyForms
             ((System.ComponentModel.ISupportInitialize)(this.pict_users)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict_voitures)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict_entretiens)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_deconnection)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,8 +273,9 @@ namespace WinForms.MyForms
         private System.Windows.Forms.Label labUsers;
         private System.Windows.Forms.Label lab_voitures;
         private System.Windows.Forms.Label lab_entretiens;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox btn_deconnection;
         private System.Windows.Forms.Label lab_deconnecter;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

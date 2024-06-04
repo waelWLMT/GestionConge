@@ -28,6 +28,15 @@ namespace Core.Models
             Login = login;
             Password = password;
         }
+
+
+
+        public override string ToString()
+        {
+            return " " + UserId + " " +
+                " " + Nom + "  & " +
+                " " + Prenom + " ";  
+        }
     }
 
 
